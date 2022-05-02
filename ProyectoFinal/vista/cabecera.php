@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/lateral.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/registro.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASEURL ?>/css/objetivos.css">
+    <link rel="stylesheet" href="<?php echo BASEURL ?>/css/menuNav.css">
     
 </head>
 

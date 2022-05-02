@@ -1,6 +1,6 @@
 <?php include 'vista/cabecera.php';?>
 
-<h1> Bienvenido! </h1>
+<h1 id="cabTitulo"> Bienvenido! </h1>
 </br>
 
 <section>
