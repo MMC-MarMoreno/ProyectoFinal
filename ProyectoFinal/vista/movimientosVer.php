@@ -1,17 +1,10 @@
-<head>
-<link rel="stylesheet" href="../css/contenidoVer.css">
-</head>
-<?php include "nav.php"; ?>
-<?php include 'lateralReg.php';?>
-<?php
-   
+<?php include "cabecera.php" ?>
+<?php   
     session_start();
     if (isset($_SESSION["usuario"])) {
         include "lateralReg.php";
-        } 
-
-       
-    ?>
+        }        
+?>
     
 <section class="mainContent">
       <div class="productRow"><!-- Each product row contains info of 3 elements -->

@@ -1,5 +1,11 @@
 <?php include "cabecera.php"; ?>
-
+<?php
+   
+    session_start();
+    if (isset($_SESSION["usuario"])) {
+        include "lateralReg.php";
+        }        
+    ?>   
 <section class="sidebar"> 
 <div id="menubar">
 <nav class="menu">
