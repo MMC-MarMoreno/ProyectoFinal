@@ -1,4 +1,4 @@
-<?php include __DIR__ . "/../const.php" ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="<?php echo BASEURL ?>/css/contenidoVer.css">
+    <link rel="stylesheet" href="<?php echo BASEURL . '/css/contenidoVer.css';?>">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/formContac.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/formMov.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/lateral.css">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/objetivos.css">
     <link rel="stylesheet" href="<?php echo BASEURL ?>/css/menuNav.css">
+
     
 </head>
 
@@ -22,13 +23,4 @@
 
     <?php include "nav.php"; ?>
 
-    <?php
-    /*
-    session_start();
-    if (isset($_SESSION["usuario"])) {
-        include "lateralReg.php";
-        } 
-
-        */
-    ?>
     

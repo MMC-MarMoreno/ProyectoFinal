@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."ProyectoFinal/const.php";
+include $_SERVER['DOCUMENT_ROOT']."/ProyectoFinal/const.php";
 session_start();
 if (isset($_SESSION['usuario'])){
     header("location: ".VISTAS."principalRegistro.php");

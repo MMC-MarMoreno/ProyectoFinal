@@ -35,7 +35,6 @@ class ControladorUsuario{
 }
 
 $controlador = new ControladorUsuario();
-echo "¨HOLA";
 
 if(isset($_POST['login'])){
     $usuario = $_POST['usuario'];
