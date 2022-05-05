@@ -4,8 +4,7 @@ include "./lateralReg.php";
        
 $id = $_SESSION['usuario']['id_comunidad'];
 include MODELO."movimientosModelo.php"; 
-        if (isset($_POST['add'])){
-        
+        if (isset($_POST['add'])){       
         
           $fecha= $_POST['fecha'];
           $tipo=$_POST['tipo'];
@@ -19,38 +18,38 @@ include MODELO."movimientosModelo.php";
 
   <div>
     <form method="POST">
-      <div>
+      <div class="mb-3 mt-3">
         <label>Fecha Movimiento</label>
         <input name="fecha" id="fecha" type="fetch">
       </div>
       
-      <div class="crearMov">
+      <div >
         Tipo de Movimiento:
-        <input name="tipo" id="tipo" type="radio" value="ingreso">
+        <input class="form-check-input" name="tipo" id="tipo" type="radio"  value="ingreso">
         <label>Ingreso</label>
-        <input name="tipo" id="tipo" type="radio" value="gasto">
+        <input class="form-check-input" name="tipo" id="tipo" type="radio" value="gasto">
         <label>Gasto</label>
       </div>
       
-      <div class="crearMov">
+      <div class="mb-3 mt-3">
         <label id="concepto">Concepto </label>
         <input name="concepto" type="text">
       </div>
       
-      <div class="crearMov">
+      <div class="mb-3 mt-3">
         <label id="cantidad">Cantidad €</label>
         <input name="cantidad" type="decimal">
       </div>
       
-      <div class="crearMov">
-        <button type="submit" name="add">Añadir</button>
+      <div class="mb-3 mt-3">
+        <button class="btn btn-success" type="submit" name="add">Añadir</button>
       </div>      
     
     </form>
   </div>
 
 <div class="tabla">
-        <table>
+        <table class="table table-bordered">
           <tr>
             <th>
               Fecha Movimiento
@@ -68,7 +67,7 @@ include MODELO."movimientosModelo.php";
           <?php
            foreach($movimientos as $movimiento){ ?>
           <tr>
-          <td><?php echo $movimiento['fecha'];?></td>
+            <td><?php echo $movimiento['fecha'];?></td>
             <td><?php echo $movimiento['tipo'];?></td>
             <td><?php echo $movimiento['concepto'];?></td>
             <td><?php echo $movimiento['cantidad'];?></td>
