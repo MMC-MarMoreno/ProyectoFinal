@@ -1,8 +1,4 @@
-<?php
-    session_start();
- include "cabecera.php";
-   
-
+<?php  
     if (isset($_SESSION["usuario"])) {
        ?>
       <section class="sidebar"> 

@@ -1,6 +1,6 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/ProyectoFinal/const.php";
-include "../modelo/usuariosModelo.php";
+include __DIR__."/../const.php";
+include ROOT . "/modelo/usuariosModelo.php";
 
 class ControladorUsuario{
     public function login($usuario,$password){
@@ -33,7 +33,7 @@ class ControladorUsuario{
         header("Location: ".VISTAS."hastaLaproxima.php"); // HTTP
     }
 }
-
+print_r($_POST);
 $controlador = new ControladorUsuario();
 
 if(isset($_POST['login'])){

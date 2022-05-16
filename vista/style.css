@@ -1,9 +1,19 @@
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-html, body{
-    margin: 0;
-    padding: 0;
+.primera {
+    margin: 5em;
+    margin-left: 15em;
+    width: 70%;
+    height: 400px;
 }
-  .container{
+
+.segunda {
+    margin: 5em;
+    margin-left: 15em;
+    width: 70%;
+    height: 400px;
+}
+
+
+.container{
     width: 100%;
     max-width: 1200px;
     height: 430px;
@@ -41,8 +51,8 @@ html, body{
 }
 
 .container .card p{
-    padding: 0 1rem;
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 15px;
     font-weight: 300;
 }
 
@@ -52,15 +62,9 @@ html, body{
     color: #3498db;
 }
 
-.fantaseccion{
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;   
-}
-.ul-none{
-    list-style-type: none;
-}
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }

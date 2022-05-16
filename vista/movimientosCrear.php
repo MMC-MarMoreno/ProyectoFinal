@@ -1,7 +1,17 @@
-<?php 
-include $_SERVER['DOCUMENT_ROOT']."/ProyectoFinal/const.php";
-include "./lateralReg.php";
-       
+<?php
+session_start();
+include("cabecera_compartida.php");?>
+<title>Gestiona tu comunidad</title>
+<link rel ="stylesheet" href ="<?php echo CSS ?>contenidoVer.css"/>
+</head>
+<body>
+<?php include INCLUDE_VISTA."nav.php";
+    if (isset($_SESSION["usuario"])) {
+        include "lateralReg.php";
+        }
+        else{
+          header("location: ".BASEURL . "/index.php");
+        }    
 $id = $_SESSION['usuario']['id_comunidad'];
 include MODELO."movimientosModelo.php"; 
         if (isset($_POST['add'])){       
@@ -10,44 +20,36 @@ include MODELO."movimientosModelo.php";
           $tipo=$_POST['tipo'];
           $concepto=$_POST['concepto'];
           $cantidad=$_POST['cantidad'];
-          insertar_movimiento($tipo,$fecha,$concepto,$cantidad,$id);
-          
+          insertar_movimiento($tipo,$fecha,$concepto,$cantidad,$id);          
         }
         $movimientos = buscar_movimientos($id);
 ?>
-
   <div>
     <form method="POST">
       <div class="mb-3 mt-3">
         <label>Fecha Movimiento</label>
         <input name="fecha" id="fecha" type="fetch">
-      </div>
-      
+      </div>      
       <div >
         Tipo de Movimiento:
         <input class="form-check-input" name="tipo" id="tipo" type="radio"  value="ingreso">
         <label>Ingreso</label>
         <input class="form-check-input" name="tipo" id="tipo" type="radio" value="gasto">
         <label>Gasto</label>
-      </div>
-      
+      </div>      
       <div class="mb-3 mt-3">
         <label id="concepto">Concepto </label>
         <input name="concepto" type="text">
-      </div>
-      
+      </div>      
       <div class="mb-3 mt-3">
         <label id="cantidad">Cantidad €</label>
         <input name="cantidad" type="decimal">
-      </div>
-      
+      </div>      
       <div class="mb-3 mt-3">
         <button class="btn btn-success" type="submit" name="add">Añadir</button>
-      </div>      
-    
+      </div>   
     </form>
   </div>
-
 <div class="tabla">
         <table class="table table-bordered">
           <tr>
@@ -72,8 +74,7 @@ include MODELO."movimientosModelo.php";
             <td><?php echo $movimiento['concepto'];?></td>
             <td><?php echo $movimiento['cantidad'];?></td>
           </tr>
-          <?php } ?>
-          
+          <?php } ?>          
         </table>
 </div>
 
