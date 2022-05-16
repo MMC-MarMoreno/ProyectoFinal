@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    margin-top: 10em;
+}
+h2{
+    text-align: center;
+    margin-top: 10em;
+}
+p{
+    font-style: italic;   
+}
+.home{
+    align-items: center;
+}
+.registro{
+    
+    margin-right: 15em;
+    margin-left: 15em;
+    margin-top: 5em;
+}
+.botonAlta{
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 28px;
+    transition-duration: 0.4s;
+    margin-top: 2em;
+    margin-left: 15em;
+    align-items: center;
+}
+.botonAlta:hover {
+    background-color: #4CAF50; 
+    color: white;
+}
+.accede{
+    margin-right: 15em;
+    margin-left: 15em;
+    margin-top: 5em;
+}
